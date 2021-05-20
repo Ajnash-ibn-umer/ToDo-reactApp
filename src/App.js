@@ -6,6 +6,12 @@ function App() {
   const [toDo, setToDo] = useState('')
   const [checkedToDo, setCheckedToDo] = useState([])
   const [deltToDo, setDeltToDo] = useState([])
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month:"long",
+    day:"numeric"
+};
   return (
     <div className="app">
       <div className={'main'}>
@@ -14,7 +20,8 @@ function App() {
       </div>
       <div className="subHeading">
         <br />
-        <h2> Whoop,it's Wednesday🌝 ☕ </h2>
+        <h2>{new Date().toLocaleDateString("en-US",options)}</h2>
+       
       </div>
       <div className="input">
         <input value={toDo} onChange={
