@@ -93,7 +93,7 @@
   }
   
   .app .todos .todo .left p {
-    margin-left: 3px;
+    margin-left: 8px;
     font-size: medium;
     font-weight: 700;
     font-style: normal;
@@ -142,4 +142,14 @@
     flex-direction: column;
     padding-top: 10px;
     box-shadow:2px 2px 3px rgb(140, 140, 140);
+}
+
+.app .time{
+  background-color:rgba(0, 0, 0, 0.186);
+  border-radius: 8px;
+  height: 30px;
+  color: white !important;
+  width: 80px;
+  font-size: x-small;
+  padding-left: 5px;
 }

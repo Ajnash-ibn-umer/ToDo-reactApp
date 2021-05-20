@@ -12,6 +12,13 @@ function App() {
     month:"long",
     day:"numeric"
 };
+const options1 = {
+  timeZone:"Asia/kolkata",
+  hour12 : true,
+  hour:  "numeric",
+  minute: "numeric",seconds:"numeric"
+}
+
   return (
     <div className="app">
       <div className={'main'}>
@@ -28,7 +35,7 @@ function App() {
           (e) => setToDo(e.target.value)} type="text" placeholder="🖊 Add item..." />
 
         <i onClick={() => {
-          setToDos([...toDos, { id: Date.now(), tempText: toDo, text: toDo, status: false }])
+          setToDos([...toDos, { id: Date.now(), tempText: toDo, text: toDo, status: false,time:new Date().toLocaleTimeString("en-IN",options1) }])
           setToDo('')
         }} className="fas fa-plus"></i>
       </div>
@@ -56,6 +63,8 @@ function App() {
                 }
 
                 } value={obj.status} type="checkbox" name="" id="" />
+                
+                <p className={'time'}>{obj.time}</p>
                 <p>{obj.text}</p>
               </div>
               <div className="right">
@@ -106,6 +115,7 @@ function App() {
                           )
                         }
                       } checked={checkedToDo.status = true} type="checkbox" name="" id="" />
+                       <p className={'time'}>{obj.time}</p>
                       <p>{obj.text}</p>
                     </div>
                     <div className="right">
@@ -113,8 +123,9 @@ function App() {
                         setCheckedToDo(
                           checkedToDo.filter((obj3) => {
                             if (obj3.id === obj.id) {
-                              console.log('match');
-                              obj3 = false
+                              setDeltToDo([...deltToDo, obj3])
+                        console.log(deltToDo);
+                        obj3 = false
                             }
                             return obj3
                           })
@@ -144,7 +155,7 @@ function App() {
                 <div className="todos" key={obj.id} >
                   <div className="todo">
                     <div className="left">
-                      <input checked={false} type="checkbox" name="" id="" />
+                    <p className={'time'}>{obj.time}</p>
                        <p>{obj.text}</p>
                     </div>
                     <div className="right">
