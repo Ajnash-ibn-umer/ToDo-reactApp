@@ -57,7 +57,7 @@
     height: 1.6em;
     border-color: transparent;
     outline-color: transparent;
-    color: rgb(70, 70, 70);
+    color: rgb(24, 24, 24);
   }
   .app .input i{
     color: gray;
@@ -104,7 +104,7 @@
     font-size: medium;
     font-weight: 700;
     font-style: normal;
-    color: rgb(75, 75, 75);
+    color: rgb(0, 0, 0);
   }
 
 .app input{
@@ -152,7 +152,7 @@
 }
 
 .app .time{
-  background-color:rgba(0, 0, 0, 0.186);
+  background-color:rgba(0, 0, 0, 0.419);
   border-radius: 8px;
   height: 30px;
   color: white !important;
