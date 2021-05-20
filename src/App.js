@@ -62,7 +62,7 @@ const options1 = {
                   )
                 }
 
-                } value={obj.status} type="checkbox" name="" id="" />
+                } value={obj.status}  className={'checkbox'} type="checkbox" name="" id="" />
                 
                 <p className={'time'}>{obj.time}</p>
                 <p>{obj.text}</p>
@@ -114,7 +114,7 @@ const options1 = {
                             })
                           )
                         }
-                      } checked={checkedToDo.status = true} type="checkbox" name="" id="" />
+                      } checked={checkedToDo.status = true} className={'checkbox'} type="checkbox" name="" id="" />
                        <p className={'time'}>{obj.time}</p>
                       <p>{obj.text}</p>
                     </div>
@@ -177,7 +177,7 @@ const options1 = {
                 </div>
               )
             
-            return null
+            
           })
 
         }

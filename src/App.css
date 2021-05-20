@@ -34,7 +34,7 @@
     align-items: center;
     outline: none;
     box-shadow:2px 2px 3px rgb(140, 140, 140);
-    border-width: 5px ;
+    border-width: 10px ;
     border-color: rgb(38, 38, 38);
   }
   
@@ -46,8 +46,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 5px;
+   
+
   }
   
   .app .input input {
@@ -67,6 +69,7 @@
     font-weight: 900;
     color: rgb(255, 255, 255);
     margin-right: 5px;
+    
   }
   .app .todos {
     display: flex;
@@ -82,9 +85,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 5px;
     box-shadow:2px 2px 3px rgb(140, 140, 140);
+  }
+  .app .todos .todo:hover{
+    background-color: rgba(226, 226, 226, 0.919);
+    transition: .5s ease;
   }
   .app .todos .todo .left {
     display: flex;
@@ -152,4 +159,10 @@
   width: 80px;
   font-size: x-small;
   padding-left: 5px;
+}
+
+
+
+.app i:hover{
+color: black;
 }
